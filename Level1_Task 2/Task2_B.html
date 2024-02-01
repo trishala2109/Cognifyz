@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greeting Button</title>
+  <style>
+    .button
+    {
+        background-color: black;
+        border:none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+    <button class="button" onclick="showGreeting()">Click here</button>
+
+<script>
+    //define a function to display the greeting
+    function showGreeting()
+    {
+        //get the current hour
+        var currentHour = new Date().getHours();
+    
+        var greeting;
+        if (currentHour < 12) 
+        {
+            greeting = "Good morning!";
+        }  
+        else if (currentHour < 18)
+        {
+            greeting = "Good afternoon!";
+        }  
+        else if(currentHour < 22)
+        {
+            greeting = "Good evening!";
+        }
+        else
+        {
+            greeting = "Good night";
+        }
+
+        alert(greeting);
+    }
+</script>
+
+</body>
+</html>
